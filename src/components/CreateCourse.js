@@ -78,7 +78,7 @@ class CreateCourse extends Component {
             "Content-Type": "application/json"
         });
 
-        const myRequest = new Request(`http://localhost:5000/api/courses`, {
+        const myRequest = new Request(`https://tech10-rest-api.herokuapp.com/api/courses`, {
             method: 'POST',
             headers: myHeader,
             body: JSON.stringify(course)

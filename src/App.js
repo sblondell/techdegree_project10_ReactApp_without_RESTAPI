@@ -39,7 +39,7 @@ class App extends Component {
             Authorization: "Basic " + _64encoded_userAndPass
         });
 
-        const myRequest = new Request("http://localhost:5000/api/users", {
+        const myRequest = new Request("https://tech10-rest-api.herokuapp.com/api/users", {
             method: "GET",
             headers: myHeader
         });

@@ -28,7 +28,7 @@ class UpdateCourse extends Component {
     componentDidMount() {
         let courseId = this.props.match.params.course_id;
 
-        fetch(`http://localhost:5000/api/courses/${courseId}`)
+        fetch(`https://tech10-rest-api.herokuapp.com/api/courses/${courseId}`)
             .then(res => {
                 if (res.status === 200) {
                     return res.json();
@@ -105,7 +105,7 @@ class UpdateCourse extends Component {
             "Content-Type": "application/json"
         });
 
-        const myRequest = new Request(`http://localhost:5000/api/courses/${this.state.courseDetails.course._id}`, {
+        const myRequest = new Request(`https://tech10-rest-api.herokuapp.com/api/courses/${this.state.courseDetails.course._id}`, {
             method: 'PUT',
             headers: myHeader,
             body: JSON.stringify(course)
